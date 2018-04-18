@@ -2,7 +2,7 @@
 
 set -eu
 
-# generate default site if not present
+# Generate default site if not present
 if [ ! -d /usr/local/moin/config ] || [ -z $(ls -A /usr/local/moin/config) ]
 then
     cp -r /usr/local/share/moin/config/* /usr/local/moin/config/
@@ -18,8 +18,9 @@ then
     cp -r /usr/local/share/moin/underlay/* /usr/local/moin/underlay/
 fi
 
-# correct permissions
+# Correct permissions
 chown -R moin:moin /usr/local/moin
 chmod -R ug+rwX /usr/local/moin
 
+# Run command
 exec "$@"
