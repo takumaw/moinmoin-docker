@@ -1,0 +1,12 @@
+version: '3'
+services:
+  moin:
+    image: takumaw/moinmoin
+    ports:
+      - 8080:8080
+      - 3031:3031
+      - 9191:9191
+    volumes:
+      - ./config:/usr/local/moin/config
+      - ./data:/usr/local/moin/data
+      - ./underlay:/usr/local/moin/underlay
