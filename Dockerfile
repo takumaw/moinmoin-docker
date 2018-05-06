@@ -14,9 +14,9 @@ RUN set -ex \
 RUN set -ex \
 	&& mkdir -p /usr/local/moin/server \
 	&& cp -r /usr/local/share/moin/server/* /usr/local/moin/server/ \
-	&& sed -i "/^#sys.path.insert(0, '\/path\/to\/farmconfigdir')/a sys.path.insert(0, '\/usr\/local\/moin\/config')" /usr/local/moin/server/* \
-	&& sed -i "s/^#from MoinMoin import log/from MoinMoin import log/" /usr/local/moin/server/* \
-	&& sed -i "s/^#log.load_config('\/path\/to\/logging_configuration_file')/log.load_config('\/usr\/local\/moin\/config\/logging\/logfile')/" /usr/local/moin/server/* \
+	&& sed -i "/^#sys.path.insert(0, '\/path\/to\/farmconfigdir')/a sys.path.insert(0, '\/usr\/local\/moin\/config')" /usr/local/moin/server/moin.* \
+	&& sed -i "s/^#from MoinMoin import log/from MoinMoin import log/" /usr/local/moin/server/moin.* \
+	&& sed -i "s/^#log.load_config('\/path\/to\/logging_configuration_file')/log.load_config('\/usr\/local\/moin\/config\/logging\/logfile')/" /usr/local/moin/server/moin.* \
 	&& mkdir -p /usr/local/moin/log
 
 ENV PATH /usr/local/moin/server:$PATH
