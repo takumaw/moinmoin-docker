@@ -38,6 +38,7 @@ EXPOSE 9191
 VOLUME /usr/local/moin/config
 VOLUME /usr/local/moin/data
 VOLUME /usr/local/moin/underlay
+VOLUME /usr/local/moin/log
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["/usr/local/bin/uwsgi", "/usr/local/moin/uwsgi.ini"]

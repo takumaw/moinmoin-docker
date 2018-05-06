@@ -10,3 +10,4 @@ services:
       - ./config:/usr/local/moin/config
       - ./data:/usr/local/moin/data
       - ./underlay:/usr/local/moin/underlay
+      - ./log:/usr/local/moin/log
