@@ -30,7 +30,7 @@ COPY moin/uwsgi.ini /usr/local/moin/
 # Copy docker-entrypoint.sh
 COPY docker-entrypoint.sh /
 
-# Finish setup
+# Define ports, volumes and the entrypoint
 EXPOSE 8080
 EXPOSE 3031
 EXPOSE 9191
