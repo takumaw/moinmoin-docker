@@ -58,8 +58,8 @@ If `config/`, `data/`, or `server/` is empty (e.g. it's first time to boot a con
 the container will automatically generate a new site under this directory
 from `/usr/local/share/moin` with additional settings (done by `/docker-entrypoint.sh`):
 
-* By default, user `root` is set as a superuser.
-  * `root` is not exist by default. You can create via <http://localhost:8080/LanguageSetup?action=newaccount> .
+* By default, user `Admin` is set as a superuser.
+  * `Admin` is not exist by default. You can create via <http://localhost:8080/LanguageSetup?action=newaccount> .
 * The `instance_dir` is set to `os.path.join(wikiconfig_dir, os.pardir)`, which points to `/usr/local/moin`.
 * All scripts under `/var/www/moin/server` is configured to use this wiki instance.
 
