@@ -1,6 +1,4 @@
-#!/bin/bash
-
-set -eu
+#!/bin/bash -e
 
 # Generate default site if not present
 if [ ! -d /usr/local/moin/config ] || [ -z $(ls -A /usr/local/moin/config) ]
