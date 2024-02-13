@@ -1,4 +1,4 @@
-FROM python:2.7
+FROM python:2.7-jessie
 
 ENV MOINMOIN_VERSION 1.9.11
 
