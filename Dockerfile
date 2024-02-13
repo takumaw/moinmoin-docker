@@ -1,6 +1,6 @@
 FROM python:2.7
 
-ENV MOINMOIN_VERSION 1.9.10
+ENV MOINMOIN_VERSION 1.9.11
 
 # Add user and group for MoinMoin
 RUN groupadd -r moin && useradd -r -g moin moin
