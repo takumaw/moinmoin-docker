@@ -23,7 +23,7 @@ ENV PATH /usr/local/moin/server:$PATH
 
 # Install uWSGI
 RUN set -ex \
-	&& pip install --no-cache-dir uwsgi
+	&& pip install --no-cache-dir "uwsgi==2.0.20"
 
 COPY moin/uwsgi.ini /usr/local/moin/
 
