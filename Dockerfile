@@ -1,6 +1,6 @@
-FROM python:2.7
+FROM python:2.7-jessie
 
-ENV MOINMOIN_VERSION 1.9.10
+ENV MOINMOIN_VERSION 1.9.11
 
 # Add user and group for MoinMoin
 RUN groupadd -r moin && useradd -r -g moin moin
@@ -23,7 +23,7 @@ ENV PATH /usr/local/moin/server:$PATH
 
 # Install uWSGI
 RUN set -ex \
-	&& pip install --no-cache-dir uwsgi
+	&& pip install --no-cache-dir "uwsgi==2.0.20"
 
 COPY moin/uwsgi.ini /usr/local/moin/
 
